@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-ng-app="App">
+<head>
+    <title></title>
+    <link rel='stylesheet' href='./libs/bootstrap/css/bootstrap.min.css'/>
+    <link rel='stylesheet' href="./stylesheets/screen.css"/>
+</head>
+<body>
+
+
+<div data-ng-controller="AppCtrl">
+
+
+    <div class="bin" droppable drop="handleDrop" ng-repeat="droppable in droppables">
+        {{ droppable.name }}
+        <div class="item" ng-repeat="item in selfItems" draggable item="item">{{ item.name }}</div>
+    </div>
+    <div class="bin" droppable="droppable" drop="handleDrop" ng-repeat="droppable in items">
+        {{ droppable.name }}
+        <div class="item" ng-repeat="item in selfItems" draggable>{{ item.name }}</div>
+    </div>
+
+</div>
+
+<script src="./libs/ios-drag-drop.js"></script>
+<script src="./libs/angular-1.1.5.min.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
