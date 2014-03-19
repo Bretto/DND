@@ -3,7 +3,7 @@
 
     var appModule = angular.module('App', [])
         .run(function () {
-//            FastClick.attach(document.body);
+
         });
 
     appModule.controller('AppCtrl', function ($scope, $http, $timeout) {
